@@ -42,12 +42,5 @@ class HTMLNode:
 
             {self.props_to_html()}
         )"""
-
-
-
-test = HTMLNode(props={
-    "href": "https://www.google.com", 
-    "target": "_blank",
-})
-
-print(test)
+        
+        return class_repr
