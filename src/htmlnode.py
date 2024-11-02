@@ -25,7 +25,7 @@ class HTMLNode:
             sub_str = f'{key}="{value}" '
             html_str += sub_str
 
-        return html_str
+        return html_str[0:-1]
 
     def __repr__(self) -> str:
         class_name = self.__class__.__name__

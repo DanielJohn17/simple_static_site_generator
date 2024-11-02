@@ -17,7 +17,7 @@ class TestHTMLNode(unittest.TestCase):
 
     def test_props_to_html(self):
         node = HTMLNode("p", props={"class": "para"})
-        self.assertEqual(node.props_to_html(), 'class="para" ')
+        self.assertEqual(node.props_to_html(), 'class="para"')
 
     def test_repr(self):
         node = HTMLNode("p", value="Hello, World!", props={"class": "para"})
@@ -29,7 +29,7 @@ class TestHTMLNode(unittest.TestCase):
             children: None,
             props: {'class': 'para'}
 
-            class="para" 
+            class="para"
         )""",
         )
 
