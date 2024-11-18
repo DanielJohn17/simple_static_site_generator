@@ -18,9 +18,9 @@ class ParentNode(HTMLNode):
         if not self.children:
             raise ValueError("Children is required!!")
 
-        html_str = ""
+        def render_children(children):
+            if not children:
+                return ""
+            return children[0].to_html() + render_children(children[1:])
 
-        for child in self.children:
-            html_str += child.to_html()
-
-        return html_str
+        return render_children(self.children)
